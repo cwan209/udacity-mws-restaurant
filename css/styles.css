@@ -55,8 +55,10 @@ nav {
   background-color: #252831;
   text-align:center;
 }
+
 nav h1 {
   margin: auto;
+  padding-top: 20px;
 }
 nav h1 a {
   color: #fff;
@@ -96,6 +98,25 @@ nav h1 a {
 #breadcrumb li a:hover {
     color: #01447e;
     text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    height: 100px;
+  }
+  nav h1 {
+    padding-top: 30px !important;
+  }
+  nav h1 a {
+    font-size: 15pt;
+    font-weight: 100 !important;
+  }
+  #breadcrumb {
+    width: 100% !important;
+  }
+  #breadcrumb li {
+    font-size: 16pt;
+  }
 }
 /* ====================== Map ====================== */
 #map {
@@ -197,6 +218,20 @@ nav h1 a {
   top: 80px;
   width: 50%;
 }
+@media only screen and (max-width: 768px) {
+  .inside #map-container {
+    width: 100% !important;
+    height: 500px !important;
+    position: relative !important;
+    margin-top: 80px;
+  }
+  .leaflet-top, .leaflet-bottom {
+    z-index: 0 !important;
+  }
+  #restaurant-img {
+    border-top-left-radius: 30px !important;
+  }
+}
 .inside #map {
   background-color: #ccc;
   height: 100%;
@@ -242,6 +277,11 @@ nav h1 a {
   padding: 140px 40px 30px;
   width: 50%;
 }
+@media only screen and (max-width: 768px) {
+  #restaurant-container, #reviews-container {
+    width: 100% !important;
+  }
+}
 #reviews-container {
   padding: 30px 40px 80px;
 }
@@ -266,6 +306,61 @@ nav h1 a {
   padding: 0 20px 20px;
   position: relative;
   width: 85%;
+}
+@media only screen and (max-width: 768px) {
+  #reviews-list li {
+    padding: 0px !important;
+    margin-right: 20px !important;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    position: relative;
+    width: 80%;
+  }
+
+  #reviews-list li p.review-rating {
+    background: #f58500;;
+    color: white;
+    width: 20%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+
+  #reviews-list li div.review-header {
+    background: #333333;
+    padding: 15px;
+    border-top-left-radius: 30px;
+    height: 30px;
+  }
+
+  #reviews-list li p.review-name {
+    color: white;
+    font-size: 18px;
+    width: 30%;
+    float: left;
+    padding-left: 10px;
+  }
+
+  #reviews-list li p.review-date {
+    color: lightgrey;
+    width: 30%;
+    float: right;
+    text-align: right;
+    padding-top: 5px;
+  }
+
+  #reviews-list li p.review-comments {
+    padding-left: 20px;
+  }
+
+  .inside #footer {
+    width: 100%;
+  }
+
 }
 #reviews-list li p {
   margin: 0 0 10px;
